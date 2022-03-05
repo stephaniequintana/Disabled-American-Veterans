@@ -14,10 +14,10 @@ This site is a pro bono donation to a community thrift store that helps support 
 * Content includes ways the local community can donate and shop
 
 <!-- ![site gif](assets/DAV.gif) -->
-<div style="height=800px;">
+<div>
   <img height="300" width="200" align="right" src="assets/DAV.gif" />
 </div><div style="height=800px;">
-  <img height="300" width="700" vertical-align="top" src="assets/desktop.png" />
+  <img height="300" width="600" vertical-align="top" src="assets/desktop.png" />
 </div>
 
 
