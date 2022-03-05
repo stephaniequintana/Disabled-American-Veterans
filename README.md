@@ -17,7 +17,7 @@ This site is a pro bono donation to a community thrift store that helps support 
 <div>
   <img height="300" width="200" align="right" src="assets/DAV.gif" />
 </div><div style="height=800px;">
-  <img height="300" vertical-align="top" src="assets/desktop.png" />
+  <img height="300" width="500" vertical-align="top" src="assets/desktop.png" />
 </div>
 
 
