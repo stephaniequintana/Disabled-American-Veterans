@@ -1,0 +1,92 @@
+#dav{
+  scroll-margin-top: 6rem;
+}
+.dav{
+  grid-area: dav;
+
+  width: 100%;
+  color:var(--white);
+  padding-bottom: 7.5rem;
+  padding-left: 4.7rem;
+  margin-top: 7rem;
+
+  background: linear-gradient(to top right, rgba(2, 14, 48, .95), rgba(3, 19, 60, 0.85)), url('https://cdn.pixabay.com/photo/2016/11/07/23/46/veteran-1807121__340.jpg') no-repeat;
+  background-size: cover;
+  background-position: -25% 25%;
+  -webkit-clip-path: polygon(17% 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(17% 0, 100% 0, 100% 100%, 0 100%);
+  box-shadow:  0 1.5rem 4rem rgba(black, .2);
+  position: relative;
+
+  @include respond(tab-land){
+    padding-bottom: 3.5rem;
+  }
+  @include respond(phone){
+    -webkit-clip-path: none;
+    clip-path: none;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-top: 5rem
+  }
+  @include respond(smaller-phone){
+    background-position: 0 0;
+  }
+
+  &__info{
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    line-height: 1.5;
+    letter-spacing: .07rem;
+    color: var(--white);
+
+    @include respond(tab-land){
+      width: 80%;
+    }
+    @include respond(phone){
+      width: 70%;
+    }
+    @include respond(smaller-phone){
+      width: 80%;
+      padding-bottom: 5rem;
+    }
+
+
+  }
+  &__link:link,
+  &__link:visited{
+    color: var(--gold);
+    text-decoration: none;
+  }
+  &__link:hover{
+    transform: scale(1.2);
+    transition: all .2s;
+  }
+
+  &__shape{
+    height: 30rem;
+    width: 15rem;
+    position: relative;
+    float: left;
+    clip-path: polygon(0 0, 100% 0, 0 100%, 0 100%);
+    shape-outside: polygon(0 0, 100% 0, 0 100%, 0 100%);
+
+    @include respond(tab-land){
+      height: 35rem;
+      width: 12.5rem;
+    }
+    @include respond(tab-port){
+      height: 35rem;
+      width: 10rem;
+    }
+    @include respond(phone){
+      height: 35rem;
+      width: 15rem;
+    }
+    @include respond(smaller-phone){
+      height: 0;
+      width: 0;
+    }
+  }
+
+}

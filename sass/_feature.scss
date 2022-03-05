@@ -1,0 +1,70 @@
+#features{
+  scroll-margin-top: 10rem;
+}
+.features{
+  grid-area: feature;
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  
+  grid-gap: 6rem;
+
+  @include respond(tab-port){
+    margin-top: 7rem;
+  }
+
+  &__info{
+    grid-column: 1 / -1;
+    
+    & h2{
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    & p{
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      color: var(--primary);
+      padding-bottom: 1rem;
+    }
+    
+  }
+  &__more{
+    grid-column: 1 / -1;
+    justify-self: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: .07;
+  }
+}
+.feature{
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 6rem min-content;
+  
+  grid-template-areas: "svg head" ". text";
+
+  & svg{
+    grid-area: svg;
+    transform: translateY(1rem);
+  }
+  &__heading{
+    grid-area: head;
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+    justify-self: start;
+    align-self: center;
+  }
+  &__text{
+    grid-area: text;
+    padding: 0 1em; 
+  }
+}
+.feature::after{
+  content: "";
+  height: 100%;
+  width: 1px;
+  background-color: var(--gold);
+  margin-left: 2.5rem;
+  
+}

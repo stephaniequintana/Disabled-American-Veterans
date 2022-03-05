@@ -1,0 +1,79 @@
+.footer{
+  grid-area: foot;
+  background-color: var(--primary);
+}
+.footer-nav{
+  list-style-type: none;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(12, 1fr); 
+  grid-template-areas: ". . contact contact . finds finds . about about . ."
+                      " . . . vol vol . . fb fb . . .";
+  place-items: center;
+  padding: 2rem 5rem;
+
+  @include respond(smaller-phone){
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: ". . contact contact contact .  . finds finds finds . ." ". . about about about . . vol vol vol . ."
+                      " . . . . fb fb fb . . . . .";
+    
+  }
+
+  &__item{
+    &--1{
+      grid-area: contact;
+      align-self: end;
+      @include respond(smaller-phone){
+        place-self: start;
+      }
+    }
+    &--2{
+      grid-area: finds;
+      align-self: end;
+      @include respond(smaller-phone){
+        place-self: start;
+      }
+    }
+    &--3{
+      grid-area: about;
+      align-self: end;
+      @include respond(smaller-phone){
+        place-self: start;
+      }
+    }
+    &--4{
+      grid-area: vol;
+      place-self: end;
+      @include respond(smaller-phone){
+        place-self: start;
+      }
+    }
+    &--5{
+      grid-area: fb;
+      @include respond(smaller-phone){
+        place-self: center;
+      }
+    }
+  }
+
+  &__link:link,
+  &__link:visited{
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.5rem 0;
+    display:block;
+    transition: all .2s;
+  }
+  &__link:hover,
+  &__link:active{
+    background-color: rgba(#fff, .05);
+    transform: translateY(-3px);
+  }
+  &__fb{
+    padding-left: 1rem;
+  }
+
+}

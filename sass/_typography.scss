@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+html{
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-size: 62.5%;
+  color: var(--primary-text);
+
+  @include respond(tab-land){//901-1200px
+    font-size: 56.25%;
+  }
+  @include respond(tab-port){//601-900px  
+    font-size: 50%; 
+  }
+  @include respond(sm-phone){//601-900px  
+    font-size: 37.5%; 
+  }
+  @include respond(big-desktop){//1800++px   
+    font-size: 87.5%;
+  }
+}
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #eee;
+}
+h2, h3, h4, h5{
+  color: var(--primary);
+}
+h1{
+  font-size: 3.2rem;
+  font-weight: 400;
+  align-self: center;
+  padding-left: 1em;
+  padding-top: 13%;
+  padding-bottom: 4rem;
+  color: var(--white);
+
+  @include respond(phone){
+    padding-top: 10%;
+    font-size: 2.4rem;
+  }
+}
+h2{
+  font-size: 3.0rem;
+}
+h3{
+  font-size: 2.4rem;
+  text-decoration: underline;
+  padding-top: 3.5rem;
+}
+h4{
+  font-size: 1.8rem;
+}
+h4{
+  font-size: 1.6rem;
+}
+p{
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 400;
+}
+.link{
+  color:var(--red); 
+}
+.caveat{
+  font-family: 'Caveat', cursive;
+  color: var(--primary);
+}
